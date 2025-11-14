@@ -19,18 +19,30 @@ const url ="https://api.giphy.com/v1/gifs/search?api_key=JXrN3XBIK6nCvc1msOBiWzN
 // Task 4: Making the API call
 // Define the function to fetch the data and console log the url key
 
+async function fetchData(requestURL) {
+ 	const response = await fetch(requestURL)
+    const data = await response.json()
+	console.log(data)
+    return	data
+}
 
 
 // Call the function to test it worked
-
+fetchData(url)
 
 // Task 5: Running it back
 // Find the endpoint that returns a random sticker
 // Build the request URL for a coding sticker
+const url2 = "https://api.giphy.com/v1/stickers/random?api_key=JXrN3XBIK6nCvc1msOBiWzNf2CGY2g94"
 
-
+async function fetchData2(requestURL) {
+ 	const response = await fetch(requestURL)
+    const data = await response.json()
+	console.log(data)
+    return	data
+}
 // Define and call the function that prints just the sticker URL
-
+fetchData2(url2)
 
 
 
